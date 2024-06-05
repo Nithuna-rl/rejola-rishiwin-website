@@ -79,13 +79,6 @@
         dotsData: true,
     });
 
-    $(document).ready(function(){
-        $(".dropdown-item").click(function(){
-            $(this).find("ul").slideToggle();
-            return false; // Prevent the event from bubbling up the DOM tree
-            });
-        });
-
     
 })(jQuery);
 
