@@ -81,7 +81,57 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu border-0 m-0">
+                        <li class="dropdown-item dropdown-subitem"><span>Building Construction</span>
+                            <ul>
+                                <li>Overall Construction Works, On Time Execution, Cost Effectiveness, Best Quality. </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item dropdown-subitem"><span>Designing</span>
+                            <ul>
+                                <li>Structural Designing</li>
+                                <li>3D Elevation Designing</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item">Vasthu Consultation</li>
+                        <li class="dropdown-item">Renovation Works</li>
+                        <li class="dropdown-item">Building Demolition Works</li>
+                        <li class="dropdown-item dropdown-subitem"><span>MEP Works</span>
+                            <ul>
+                                <li>Electrical & Plumbing Works, AC , HVAC, Firefighter.etc </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item dropdown-subitem"><span>Finishing Works</span>
+                            <ul>
+                                <li>Carpentry</li>
+                                <li>Painting</li>
+                                <li>Flooring</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item dropdown-subitem"><span>Approval Services</span>
+                            <ul>
+                                <li>Corporation & CMDA Plan Approval Services</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item dropdown-subitem"><span>Budgeting</span>
+                            <ul>
+                                <li>BOQ Preparation with Rate Analysis</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item dropdown-subitem"><span>Planning</span>
+                            <ul>
+                                <li>Project Scheduling & Costing</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item dropdown-subitem"><span>Client Billing</span>
+                            <ul>
+                                <li>Accounting bill & GST Filling Work</li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
                 <a href="project.html" class="nav-item nav-link">Projects</a>
                 <a href="contact.html" class="nav-item nav-link">Contact Us</a>
             </div>
@@ -294,6 +344,14 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+       $(document).ready(function(){
+        $(".dropdown-item").click(function(){
+            $(this).find("ul").slideToggle();
+            return false; // Prevent the event from bubbling up the DOM tree
+            });
+        });
+    </script>
 </body>
 
 </html>

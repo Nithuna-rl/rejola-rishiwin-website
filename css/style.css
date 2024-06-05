@@ -575,3 +575,33 @@ h6,
         text-align: left;
     }
 }
+
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-subitem > span::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+}
+
+.dropdown-item ul {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: transparent;
+}
+
+
+.dropdown-item ul li {
+    padding: .25rem 1rem;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
