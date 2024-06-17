@@ -77,8 +77,50 @@
         dots: true,
         items: 1,
         dotsData: true,
-    });
+    });     
 
+    $(document).ready(function() {
+        const images = [
+            'img/projects/1.jpg',
+            'img/projects/2.jpg',
+            'img/projects/3.jpg',
+            'img/projects/4.jpg',
+            'img/projects/5.jpg',
+            'img/projects/6.jpg',
+            'img/projects/7.jpg',
+            'img/projects/8.jpg',
+            'img/projects/9.jpg',
+            'img/projects/10.jpg',
+            'img/projects/11.jpg',
+            'img/projects/12.jpg',
+            'img/projects/13.jpg',
+            'img/projects/14.jpg',
+            'img/projects/15.jpg',
+            'img/projects/16.jpg',
+            'img/projects/17.jpg',
+            'img/projects/18.jpg',
+            'img/projects/19.jpg',
+            'img/projects/20.jpg',
+            'img/projects/21.jpg',
+            'img/projects/22.jpg',
+            'img/projects/23.jpg',
+            'img/projects/24.jpg',
+        ];
+        const gallery = document.querySelector('.gallery');
+        
+        images.forEach(imageSrc => {
+            const imgDiv = document.createElement('div');
+            imgDiv.classList.add('gallery-image', 'col-lg-4', 'col-md-6');
+            
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.alt = '';
+            
+            imgDiv.appendChild(img);
+            gallery.appendChild(imgDiv);
+        });
+  
+    });
     
 })(jQuery);
 

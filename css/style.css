@@ -606,3 +606,13 @@ h6,
     white-space: pre-wrap;
     font-size: 14px;
 }
+
+.gallery {
+   display: flex;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
