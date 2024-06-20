@@ -79,7 +79,7 @@
         dotsData: true,
     });     
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         const images = [
             'img/projects/1.jpg',
             'img/projects/2.jpg',
@@ -107,20 +107,20 @@
             'img/projects/24.jpg',
         ];
         const gallery = document.querySelector('.gallery');
-        
-        images.forEach(imageSrc => {
-            const imgDiv = document.createElement('div');
-            imgDiv.classList.add('gallery-image', 'col-lg-4', 'col-md-6');
-            
-            const img = document.createElement('img');
-            img.src = imageSrc;
-            img.alt = '';
-            
-            imgDiv.appendChild(img);
-            gallery.appendChild(imgDiv);
-        });
-  
+
+        if (gallery) {
+            images.forEach(imageSrc => {
+                const imgDiv = document.createElement('div');
+                imgDiv.classList.add('gallery-image', 'col-lg-4', 'col-md-6');
+
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = '';
+
+                imgDiv.appendChild(img);
+                gallery.appendChild(imgDiv);
+            });
+        } else { } // console.warn("Gallery element not found on this page."); 
     });
-    
 })(jQuery);
 
