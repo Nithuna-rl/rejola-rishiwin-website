@@ -556,6 +556,7 @@ h6,
 }
 
 .logo {
+    height: 80px;
     max-width: 100%;
 }
 
@@ -563,14 +564,13 @@ h6,
     font-size: 2.5rem;
 }
 
+.img-small {
+    display: none !important;
+}
+
 @media (min-width: 577px) {
     .owl-carousel-inner h1 {
         text-align: center;
-    }
-
-    .logo {
-        height: 80px;
-        margin-right: 1rem;
     }
 }
 
@@ -579,12 +579,20 @@ h6,
         text-align: left;
     }
 
-    .logo {
-        height: 60px;
+    .navbar-brand {
+       margin: 0 !important;
     }
 
     .header-carousel .owl-carousel-item img {
         object-fit: cover;
+    }
+
+    .img-small {
+        display: block !important;
+    }
+
+    .img-big {
+        display: none;
     }
 }
 
