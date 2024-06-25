@@ -636,3 +636,25 @@ h6,
     height: 300px;
     object-fit: cover;
 }
+
+.address .third-line {
+    display: inline-block;
+    text-indent: 30px;
+}
+
+@media (max-width: 991px) {
+    .address .second-line,
+    .address .third-line {
+        display: inline-block;
+        text-indent: 30px;
+    }
+}
+
+@media (max-width: 321px) {
+    .address .second-line,
+    .address .third-line {
+        display: block;
+        margin-left: 30px;
+        text-indent: 0;
+    }
+}
