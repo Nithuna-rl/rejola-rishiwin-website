@@ -580,7 +580,7 @@ h6,
     }
 
     .navbar-brand {
-       margin: 0 !important;
+        margin: 0 !important;
     }
 
     .header-carousel .owl-carousel-item img {
@@ -601,7 +601,7 @@ h6,
     cursor: pointer;
 }
 
-.dropdown-subitem > span::after {
+.dropdown-subitem>span::after {
     content: "\f107";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -628,7 +628,7 @@ h6,
 }
 
 .gallery {
-   display: flex;
+    display: flex;
 }
 
 .gallery-image img {
@@ -643,6 +643,7 @@ h6,
 }
 
 @media (max-width: 991px) {
+
     .address .second-line,
     .address .third-line {
         display: inline-block;
@@ -651,10 +652,15 @@ h6,
 }
 
 @media (max-width: 321px) {
+
     .address .second-line,
     .address .third-line {
         display: block;
         margin-left: 30px;
         text-indent: 0;
+    }
+
+    .contact-info {
+        width: 0 !important;
     }
 }
