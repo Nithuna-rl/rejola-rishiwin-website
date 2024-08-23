@@ -197,30 +197,37 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    <div id="message-container">
+                        <div id="success-message" class="alert alert-success" style="display: none;"></div>
+                        <div id="error-message" class="alert alert-danger" style="display: none;"></div>
+                    </div>
+                    <form action="contact-form.php" method="post" enctype="application/x-www-form-urlencoded">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Your Name" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Your Email" required>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" name="subject"
+                                        placeholder="Subject" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                        style="height: 100px"></textarea>
+                                        name="message" style="height: 100px" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
@@ -309,6 +316,23 @@
                 return false; // Prevent the event from bubbling up the DOM tree
             });
         });
+    </script>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+    
+            if (urlParams.has('message')) {
+                successMessage.textContent = urlParams.get('message');
+                successMessage.style.display = 'block';
+            }
+    
+            if (urlParams.has('error')) {
+                errorMessage.textContent = urlParams.get('error');
+                errorMessage.style.display = 'block';
+            }
+        }
     </script>
 </body>
 

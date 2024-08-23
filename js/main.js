@@ -103,8 +103,6 @@
             'img/projects/20.jpg',
             'img/projects/21.jpg',
             'img/projects/22.jpg',
-            'img/projects/23.jpg',
-            'img/projects/24.jpg',
         ];
         const gallery = document.querySelector('.gallery');
 
